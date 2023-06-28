@@ -8,4 +8,8 @@
     {{ form.title }}
     {{ form.submit }}
 </form>
-{%endblock main%}
+{% if title %}
+    <h1>{{title}}</h1>
+{% endif %}    
+
+{%endblock %}
