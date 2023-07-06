@@ -3,10 +3,11 @@
 {%block main%}
 <p>some content on the about page!</p>
 <form action="/about" method="post">
-    {{ form.csrf_token}}
-    {{ form.title.label}}
+    {{ form.csrf_token }}
+    {{ form.title.label }}
     {{ form.title }}
     {{ form.submit }}
+    {{ form.hidden_tag()}}
 </form>
 {% if title %}
     <h1>{{title}}</h1>
