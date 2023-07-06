@@ -11,8 +11,8 @@ def index():
     tasks = Task.query.all()
     return render_template('index.html', tasks=tasks)
 
-@app.route('/about', methods = ['GET', 'POST'])
-def about():
+@app.route('/add', methods = ['GET', 'POST'])
+def add():
     form = forms.AddTaskForm()
     if form.validate_on_submit():
         db.create_all()
@@ -20,4 +20,4 @@ def about():
         db.session.add(t)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('about.html', form=form)
+    return render_template('add.html', form=form)

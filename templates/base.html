@@ -2,8 +2,8 @@
 <h3>subheader: Something something</h3>
 <hr>
 <ul>
-    <li><a href="#">Home page</a></li>
-    <li><a href="#">About page</a></li>
+    <li><a href="{{ url_for('index') }}">Tasks</a></li>
+    <li><a href="{{ url_for('add') }}">Add New</a></li>
 </ul>
 {% block main %}
-{% endblock main%}
+{% endblock main %}
