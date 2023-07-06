@@ -6,3 +6,5 @@ class AddTaskForm(FlaskForm):
     title= StringField('title', validators=[DataRequired()])
     submit = SubmitField('submit')
     
+class DeleteTaskForm(FlaskForm):
+    submit = SubmitField('Delete') 
