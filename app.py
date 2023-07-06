@@ -6,8 +6,6 @@ app.config['SECRET_KEY'] = 'secret-key'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = SQLAlchemy(app)
 
-#with app.app_context():
- #   db.create_all()
 
 from routes import *
 
